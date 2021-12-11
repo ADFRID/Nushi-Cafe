@@ -1,0 +1,103 @@
+body{
+  background: red;
+}
+
+
+/*
+* Version de desktop vers mobile
+*/
+
+/*background-image: url("https://res.cloudinary.com/dieaf65mg/image/upload/v1634490661/image/image3_v6uplv.jpg");
+  background-size: 100%;*/
+
+@media all and(max-width:960px){
+  body{
+    background: green;
+  } 
+}
+
+
+
+@media all and (max-width:660px){
+  body{
+    background: yellow;
+  } 
+}
+
+
+/*
+* Version de mobile vers le desktop
+*/
+
+@media all and (min-width: 600px) {
+  body {
+    /* background: green; */
+    background: none;
+  }
+
+  header {
+    background-color: none;
+    min-height: 80vh;
+  }
+
+  nav{
+    padding:2em;
+  }
+  
+  nav div{
+    float:left;
+    min-width:20vw;
+    font-size: 4rem;
+  }
+  
+  nav .menu-main{
+    float:right;
+    min-width:40vw;
+  }
+  
+  .menu-main{
+    list-style:none;
+    position: relative;
+    display: inline-flex;
+  }
+  
+  a.nav-link{
+    margin: 2px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: var(--main-fonts-color);
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+
+
+  header{
+    position:relative;
+    background: none;
+  }
+
+  .intro{
+    position:absolute;
+    top:10em;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align:center;
+  }
+
+.hamburger{
+  display: none;
+}
+
+#videoBG {
+ display: block;
+  position:fixed;
+  z-index: -1;
+  min-width:100%;
+  min-height:100%;
+}
+
+
+
+
+}

@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  
+  --main-fonts-color: rgb(0, 0, 0);
+  --main-block-bg: rgb(255, 201, 162);
+  --main-trans-bg: transparent;
+
+
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(0, 0, 0);
+  
+  /* background-color: white  */
+  }
+
+h1{
+  font-size: 2em;
+}
+
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+header {
+  margin: 0 auto;
+  margin-top: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.home{
+  /* background-color:violet; */
+  background: linear-gradient(
+    rgba(251, 247, 233, 0.85), 
+    rgba(255, 249, 204, 0.85)
+    ),
+    url('../img/bg-mobile.jpg' )
+    ;
+  background-size: cover;
+  
+  
+  
+}
+
+#videoBG {
+  display: none;
+}
+
+
+main{
+  margin: 0 20px 4em 20px;
+  padding: 0em;
+  width: auto;
+  color: var(--main-fonts-color);
+  overflow:hidden;
+  text-align:center;
+  background-color: var(--main-trans-bg);; 
+}
+
+ 
+label{
+  text-align: left;
+  font-size: 4em;
+  margin-top: 0px;
+  margin-right: 20px;
+  width: 45%;
+  
+} 
+
+img{
+  display: none;
+}
+
+
+.intro{
+  margin:10em 20px 3em 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+#intro2{
+  margin-top: 4rem;
+  font-size: 1.5em;
+}
+
+.menu-main{
+  display: none;
+}
+
+.logo{
+  float: right;
+  font-size: 2.2em;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: rgb(0, 0, 0);
+
+}
+
+
+
+
+.galerie {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  max-width: auto;
+}
+
+.galerie img {
+  width: 200px;
+  height: auto;
+  border: 1px solid rgb(170, 169, 169);
+}
+
+.pied{
+  column-count: 2;
+  margin-bottom: 3em;
+  font-size: 13px;
+}
+
+.pied2{
+  width: 100%;
+  margin-bottom: 0px;
+  background-color: var(--main-trans-bg);;
+  overflow: hidden;
+}
+
+footer {
+  margin: 0 auto;
+  text-align:center;
+  max-width:80vw;
+  max-width: 100vw;
+  color:rgb(0, 0, 0);
+}
+
+/*****************************Version pc*****************************************************/
+
+@media all and (min-width:600px){
+
+
+  #videoBG {
+    display: block;
+    position:fixed;
+    z-index: -1;
+    min-width:100%;
+    min-height:100%;
+  }
+
+
+  header{
+    margin: 0 auto;
+    width: 100%;
+    min-height:80vh;
+  }
+
+
+  main{
+    margin: 0 auto;
+    padding: 1em;
+    width: 90%;
+    height: 100%;
+    color: var(--main-fonts-color);
+    overflow:hidden;
+    text-align:center;
+    background-color: var(--main-trans-bg);
+  }
+
+
+  .home{
+    background: var(--main-background);
+    color:white;
+  }
+
+  .logo{
+    float: left;
+   
+  
+  }
+  nav{
+    padding:2em;
+  }
+
+  nav div{
+    float:left;
+    min-width:20vw;
+    font-size: 4rem;
+  }
+
+  nav .menu-main{
+    float:right;
+    min-width:40vw;
+  }
+
+  label{
+    display: none;
+  }
+
+
+  .menu-main{
+    list-style:none;
+    position: relative;
+    display: inline-flex;
+  }
+  
+  a.nav-link{
+    margin: 2px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: var(--main-fonts-color);
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+
+  header{
+    position:relative;
+  }
+
+  .intro{
+    position:absolute;
+    top:10em;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align:center;
+    background-color: var(--main-trans-bg);
+  }
+
+
+
+  #videoBG {
+     display: block;
+      position:fixed;
+      z-index: -1;
+      min-width:100%;
+      min-height:100%;
+  }
+
+
+  .galerie{
+  margin:0 auto;
+  max-width:80vw;
+  text-align:center;
+  }
+
+  .galerie img{
+  margin:2em;
+  width:200px;
+  height: auto;
+  border: 1px solid grey;
+  }
+
+
+  .pied2{
+    background-color: var(--main-trans-bg);
+
+  }
+
+
+
+}
+
+
+
+
+
+
+/**  Quand l'écran est trop large. 
+    * Nous devons maintenir la largeur à 100 % et mettre à l'échelle la hauteur. Nous pouvons y parvenir en utilisant min-aspect-ratio 16/9.
+    */
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/** 
+    
+    Inverse lorsque le ratio d'écran est inférieur à 16/9. Hauteur maintenue à 100% et largeur automatique.
+    
+    */
+
+@media (max-aspect-ratio: 16/9) {
+  #videoBG {
+    width: auto;
+    height: 100%;
+  }
+}
